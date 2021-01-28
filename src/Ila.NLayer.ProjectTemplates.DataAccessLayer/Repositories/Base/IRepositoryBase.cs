@@ -1,0 +1,79 @@
+﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+
+namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
+{
+    public interface IRepositoryBase<TEntity> : IDisposable where TEntity : class, IEntityBase, new()
+    {
+        #region Methods
+
+        /// <summary>
+        /// Delete
+        /// </summary>
+        /// <param name="id">Primary id</param>
+        void Delete(object id);
+
+        /// <summary>
+        /// Delete as list
+        /// </summary>
+        /// <param name="entities">List of entities</param>
+        void Delete(IEnumerable<TEntity> entities);
+
+        /// <summary>
+        /// Find
+        /// </summary>
+        /// <param name="predicate">Query</param>
+        /// <returns>Query result</returns>
+        IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
+
+        /// <summary>
+        /// Insert
+        /// </summary>
+        /// <param name="entity">Entity</param>
+        TEntity Insert(TEntity entity);
+
+        /// <summary>
+        /// Insert as list
+        /// </summary>
+        /// <param name="entities">List of entities</param>
+        /// <returns>If true, the transaction is successful</returns>
+        bool Insert(IEnumerable<TEntity> entities);
+
+        /// <summary>
+        /// Save
+        /// </summary>
+        /// <returns>Number of modified rows</returns>
+        int SaveChanges();
+
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="entity">Entity</param>
+        TEntity Update(TEntity entity);
+
+        /// <summary>
+        /// GetById
+        /// </summary>
+        /// <param name="id">Primary id</param>
+        TEntity GetById(object id);
+
+        #endregion Methods
+
+        #region Properties
+
+        /// <summary>
+        /// Gets a table
+        /// </summary>
+        IQueryable<TEntity> Table { get; }
+
+        /// <summary>
+        /// Gets a NoTracking
+        /// </summary>
+        IQueryable<TEntity> NoTracking { get; }
+
+        #endregion Properties
+    }
+}

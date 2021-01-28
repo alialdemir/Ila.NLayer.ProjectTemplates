@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q/ybFP3aXEeTGCtkCUullsZYDO0VmV4Q6Fr83xZW3I6ooKfS/jO3WjnC0Nw6kYmiWFs7Y52FI5Y//UJbu44/6w==",
+  "dgSpecHash": "W6NgHQUq32jEeCHv9Vnd0IoLS/RpSxNpybUqamnrs0P/uNvJHtRaSvaOu5botkpGa0BHYMdY65i2WMY5CZzjrA==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.BusinessLayer\\Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\ALI\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

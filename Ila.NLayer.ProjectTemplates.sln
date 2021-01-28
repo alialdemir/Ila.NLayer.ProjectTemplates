@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ila.NLayer.ProjectTemplates
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ila.NLayer.ProjectTemplates.WebApi", "src\Ila.NLayer.ProjectTemplates.WebApi\Ila.NLayer.ProjectTemplates.WebApi.csproj", "{57ABE050-7CAB-4E25-8CD1-7AC7E699E4E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ila.NLayer.ProjectTemplates.EntityFrameworkCore", "src\Ila.NLayer.ProjectTemplates.EntityFrameworkCore\Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj", "{F802DFE2-E7D4-435C-B5E0-9CD6C003D96E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{57ABE050-7CAB-4E25-8CD1-7AC7E699E4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57ABE050-7CAB-4E25-8CD1-7AC7E699E4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57ABE050-7CAB-4E25-8CD1-7AC7E699E4E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F802DFE2-E7D4-435C-B5E0-9CD6C003D96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F802DFE2-E7D4-435C-B5E0-9CD6C003D96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F802DFE2-E7D4-435C-B5E0-9CD6C003D96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F802DFE2-E7D4-435C-B5E0-9CD6C003D96E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
