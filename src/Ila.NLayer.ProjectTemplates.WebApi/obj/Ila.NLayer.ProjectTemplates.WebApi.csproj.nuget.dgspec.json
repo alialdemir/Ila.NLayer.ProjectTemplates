@@ -30,7 +30,11 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
+                "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -159,6 +163,12 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

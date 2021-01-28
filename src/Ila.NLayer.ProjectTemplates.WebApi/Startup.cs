@@ -1,6 +1,4 @@
-using Ila.NLayer.ProjectTemplates.Core.Extensions;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityBase;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
+using Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,7 +19,11 @@ namespace Ila.NLayer.ProjectTemplates.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScopedDynamic<IRepositoryBase<EntityBase>>();// Adds all repository classes as AddScoped
+            // services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddNLayerWithEntityFramework();
+
+            //    services.AddScopedDynamic<IRepositoryBase<EntityBase>>();// Adds all repository classes as AddScoped (Optional)
 
             services.AddControllers();
         }

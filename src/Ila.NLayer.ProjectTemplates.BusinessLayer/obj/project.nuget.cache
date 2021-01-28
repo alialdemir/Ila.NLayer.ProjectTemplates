@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "W6NgHQUq32jEeCHv9Vnd0IoLS/RpSxNpybUqamnrs0P/uNvJHtRaSvaOu5botkpGa0BHYMdY65i2WMY5CZzjrA==",
+  "dgSpecHash": "m+Rt89UD0OFJ2CEE0OEUW7jUqATE6cJ8sg6gYmV9v/YHt1E8AYwXDRsPaMPbqTcMeqVQdi9FvsDSmskG/Kc+CQ==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.BusinessLayer\\Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

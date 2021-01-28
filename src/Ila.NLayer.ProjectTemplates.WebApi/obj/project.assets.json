@@ -165,6 +165,9 @@
       "Ila.NLayer.ProjectTemplates.BusinessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Ila.NLayer.ProjectTemplates.DataAccessLayer": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Ila.NLayer.ProjectTemplates.BusinessLayer.dll": {}
         },
@@ -188,6 +191,9 @@
       "Ila.NLayer.ProjectTemplates.DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/Ila.NLayer.ProjectTemplates.DataAccessLayer.dll": {}
         },

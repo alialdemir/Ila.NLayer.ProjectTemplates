@@ -14,16 +14,15 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
     {
         #region Fields
 
-        private DbContext _context;
         private DbSet<TEntity> _dbSet;
 
         #endregion Fields
 
         #region Constructors
 
-        public EfRepositoryBase(DbContext dbFactory)
+        public EfRepositoryBase(DbContext dbContext)
         {
-            _context = dbFactory;
+            DbContext = dbContext;
         }
 
         #endregion Constructors
@@ -33,7 +32,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// <summary>
         /// Gets a DbSet
         /// </summary>
-        private DbSet<TEntity> DbSet => _dbSet ?? (_dbSet = _context.Set<TEntity>());
+        private DbSet<TEntity> DbSet => _dbSet ?? (_dbSet = DbContext.Set<TEntity>());
 
         /// <summary>
         /// Gets a table
@@ -45,6 +44,12 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// </summary>
         public override IQueryable<TEntity> NoTracking => DbSet.AsNoTracking();
 
+        public DbContext DbContext
+        {
+            get;
+            private set;
+        }
+
         #endregion Properties
 
         #region Methods
@@ -55,11 +60,11 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// <param name="id">Primary id</param>
         public override void Delete(object id)
         {
-            var deleteEntity = _context.Entry(GetById(id));
+            var deleteEntity = DbContext.Entry(GetById(id));
             if (deleteEntity == null)
                 throw new ArgumentNullException(nameof(deleteEntity));
 
-            if (deleteEntity is IEntityWithDeletableBase)
+            if (deleteEntity.Entity is IEntityWithDeletableBase)
             {
                 SoftDelete(deleteEntity);
             }
@@ -110,7 +115,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// <param name="entity">Entity</param>
         public override TEntity Insert(TEntity entity)
         {
-            var addedEntity = _context.Entry(entity);
+            var addedEntity = DbContext.Entry(entity);
             addedEntity.State = EntityState.Added;
 
             return entity;
@@ -123,7 +128,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// <returns>If true, the transaction is successful</returns>
         public override bool Insert(IEnumerable<TEntity> entities)
         {
-            _context.AddRange(entities);
+            DbContext.AddRange(entities);
 
             return true;
         }
@@ -134,7 +139,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// <returns>Number of modified rows</returns>
         public override int SaveChanges()
         {
-            return _context.SaveChanges();
+            return DbContext.SaveChanges();
         }
 
         /// <summary>
@@ -143,7 +148,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// <param name="entity">Entity</param>
         public override TEntity Update(TEntity entity)
         {
-            var updatedEntity = _context.Entry(entity);
+            var updatedEntity = DbContext.Entry(entity);
 
             updatedEntity.State = EntityState.Modified;
 

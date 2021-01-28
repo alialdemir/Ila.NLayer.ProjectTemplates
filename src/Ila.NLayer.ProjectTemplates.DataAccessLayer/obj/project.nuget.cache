@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Rl+gr1+y8SY+e5Or/t/lyu+6jxpzbeeso5ad0ntDSyv/Izd1tBoMty9p1g2po7Bd2a1evgPNKvvAIr9ZnNyOoA==",
+  "dgSpecHash": "CM1v16HzHZ8+MxfI24X+/ooPmlHdxzY0kB/QdOKS0jOksknPU810bKdt5gsTDr61FH4CbLl0hGBRTafS99w+bw==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
