@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4ZsJ82M+Vrw17aEyIvxe/NL115wOx4SfKBmeSPGtl8egBCzChkcDeLoYFJyVMrrai97lmuped1F+D4Etg6FG1A==",
+  "dgSpecHash": "kxxW43URuRb5BY9RHUEC9PG9vR+8gHdjtNeWOVL1/miAJZd7N5D4I7dqO7cZYJAebsL15aC9A/WT+QmLPVAaGw==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.Core\\Ila.NLayer.ProjectTemplates.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
