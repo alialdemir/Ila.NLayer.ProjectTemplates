@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "CM1v16HzHZ8+MxfI24X+/ooPmlHdxzY0kB/QdOKS0jOksknPU810bKdt5gsTDr61FH4CbLl0hGBRTafS99w+bw==",
+  "dgSpecHash": "Kg1SURCdcIqzh6R7N9LqXN817qLEIzW+eMB6wvkFzci1G9BrbrjEKF76wwzX9k+sC5K3crHrw9XNaXF+vVD48g==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+    "C:\\Users\\ALI\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

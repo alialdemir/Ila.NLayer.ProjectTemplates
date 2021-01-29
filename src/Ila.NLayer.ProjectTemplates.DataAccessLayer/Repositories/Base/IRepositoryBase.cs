@@ -1,4 +1,6 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
+﻿using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
 {
-    public interface IRepositoryBase<TEntity> : IDisposable where TEntity : class, IEntityBase, new()
+    public interface IRepositoryBase<TEntity> where TEntity : class, IEntityBase, new()
     {
         #region Methods
 
@@ -59,6 +61,15 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
         /// </summary>
         /// <param name="id">Primary id</param>
         TEntity GetById(object id);
+
+        /// <summary>
+        /// GetAllPaged
+        /// </summary>
+        /// <typeparam name="TModel">Result model</typeparam>
+        /// <param name="func">Filter</param>
+        /// <param name="paging">Paging</param>
+        /// <returns>IPagedList<TModel></returns>
+        IPagedList<TModel> GetAllPaged<TModel>(Func<IQueryable<TEntity>, IQueryable<TModel>> func, IPaging paging);
 
         #endregion Methods
 

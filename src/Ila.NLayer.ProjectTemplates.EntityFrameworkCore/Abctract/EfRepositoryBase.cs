@@ -1,6 +1,9 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
+﻿using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityWithDeletableBase;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
+using Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
@@ -155,11 +158,22 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
             return entity;
         }
 
-        protected override void Dispose(bool disposing)
+        /// <summary>
+        /// GetAllPaged
+        /// </summary>
+        /// <typeparam name="TModel">Result model</typeparam>
+        /// <param name="func">Filter</param>
+        /// <param name="paging">Paging</param>
+        /// <returns>IPagedList<TModel></returns>
+        public override IPagedList<TModel> GetAllPaged<TModel>(Func<IQueryable<TEntity>, IQueryable<TModel>> func, IPaging paging)
         {
-            base.Dispose(disposing);
+            return func(NoTracking).ToPagedList<TModel>(paging);
         }
 
+        /// <summary>
+        /// Entity soft delete
+        /// </summary>
+        /// <param name="entity">Entity</param>
         private void SoftDelete(EntityEntry<TEntity> entity)
         {
             ((IEntityWithDeletableBase)entity.Entity).Deleted = true;

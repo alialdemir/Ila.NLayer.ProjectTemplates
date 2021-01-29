@@ -1,4 +1,6 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract;
+﻿using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.UnitOfWork;
@@ -67,7 +69,7 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
         /// Delete as list
         /// </summary>
         /// <param name="entities">List of entities</param>
-        public void Delete(IEnumerable<TEntity> entities)
+        public virtual void Delete(IEnumerable<TEntity> entities)
         {
             if (entities == null)
                 throw new ArgumentNullException(nameof(entities));
@@ -148,6 +150,18 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
         public TEntity GetById(object id)
         {
             return Repository.GetById(id);
+        }
+
+        /// <summary>
+        /// GetAllPaged
+        /// </summary>
+        /// <typeparam name="TModel">Result model</typeparam>
+        /// <param name="func">Filter</param>
+        /// <param name="paging">Paging</param>
+        /// <returns>IPagedList<TModel></returns>
+        public IPagedList<TModel> GetAllPaged<TModel>(Func<IQueryable<TEntity>, IQueryable<TModel>> func, IPaging paging)
+        {
+            return Repository.GetAllPaged(func, paging);
         }
 
         #endregion Methods

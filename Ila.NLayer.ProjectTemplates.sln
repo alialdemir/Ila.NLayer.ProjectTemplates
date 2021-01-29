@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ila.NLayer.ProjectTemplates
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ila.NLayer.ProjectTemplates.EntityFrameworkCore", "src\Ila.NLayer.ProjectTemplates.EntityFrameworkCore\Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj", "{F802DFE2-E7D4-435C-B5E0-9CD6C003D96E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{5D871502-D4E8-40DE-8AC0-592F985610D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F802DFE2-E7D4-435C-B5E0-9CD6C003D96E} = {5D871502-D4E8-40DE-8AC0-592F985610D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7BC0481D-A966-4E05-89EA-E02104823AE0}
