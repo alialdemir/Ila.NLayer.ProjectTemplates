@@ -266,6 +266,66 @@
         }
       }
     },
+    "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.MockDatabase\\Ila.NLayer.ProjectTemplates.MockDatabase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.MockDatabase\\Ila.NLayer.ProjectTemplates.MockDatabase.csproj",
+        "projectName": "Ila.NLayer.ProjectTemplates.MockDatabase",
+        "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.MockDatabase\\Ila.NLayer.ProjectTemplates.MockDatabase.csproj",
+        "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.MockDatabase\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ALI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
+                "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.WebApi\\Ila.NLayer.ProjectTemplates.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -304,6 +364,9 @@
               },
               "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.EntityFrameworkCore\\Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
                 "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.EntityFrameworkCore\\Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj"
+              },
+              "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.MockDatabase\\Ila.NLayer.ProjectTemplates.MockDatabase.csproj": {
+                "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.MockDatabase\\Ila.NLayer.ProjectTemplates.MockDatabase.csproj"
               }
             }
           }

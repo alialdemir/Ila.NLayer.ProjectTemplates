@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Ila.NLayer.ProjectTemplates.Core.Models.PagedList
 {
+    [Serializable]
     public class PagedList<TModel> : Paging.Paging, IPagedList<TModel>
 
     {

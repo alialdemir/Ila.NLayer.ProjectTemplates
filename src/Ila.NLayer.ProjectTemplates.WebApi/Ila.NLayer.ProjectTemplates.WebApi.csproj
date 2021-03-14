@@ -5,14 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Ila.NLayer.ProjectTemplates.BusinessLayer\Ila.NLayer.ProjectTemplates.BusinessLayer.csproj" />
     <ProjectReference Include="..\Ila.NLayer.ProjectTemplates.Core\Ila.NLayer.ProjectTemplates.Core.csproj" />
     <ProjectReference Include="..\Ila.NLayer.ProjectTemplates.DataAccessLayer\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj" />
     <ProjectReference Include="..\Ila.NLayer.ProjectTemplates.EntityFrameworkCore\Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Ila.NLayer.ProjectTemplates.MockDatabase\Ila.NLayer.ProjectTemplates.MockDatabase.csproj" />
   </ItemGroup>
 
 

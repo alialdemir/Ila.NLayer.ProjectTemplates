@@ -257,6 +257,19 @@
         "runtime": {
           "bin/placeholder/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.dll": {}
         }
+      },
+      "Ila.NLayer.ProjectTemplates.MockDatabase/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Ila.NLayer.ProjectTemplates.DataAccessLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ila.NLayer.ProjectTemplates.MockDatabase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ila.NLayer.ProjectTemplates.MockDatabase.dll": {}
+        }
       }
     }
   },
@@ -806,6 +819,11 @@
       "type": "project",
       "path": "../Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj",
       "msbuildProject": "../Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj"
+    },
+    "Ila.NLayer.ProjectTemplates.MockDatabase/1.0.0": {
+      "type": "project",
+      "path": "../Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj",
+      "msbuildProject": "../Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -813,7 +831,8 @@
       "Ila.NLayer.ProjectTemplates.BusinessLayer >= 1.0.0",
       "Ila.NLayer.ProjectTemplates.Core >= 1.0.0",
       "Ila.NLayer.ProjectTemplates.DataAccessLayer >= 1.0.0",
-      "Ila.NLayer.ProjectTemplates.EntityFrameworkCore >= 1.0.0"
+      "Ila.NLayer.ProjectTemplates.EntityFrameworkCore >= 1.0.0",
+      "Ila.NLayer.ProjectTemplates.MockDatabase >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -858,6 +877,9 @@
             },
             "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.EntityFrameworkCore\\Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
               "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.EntityFrameworkCore\\Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj"
+            },
+            "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.MockDatabase\\Ila.NLayer.ProjectTemplates.MockDatabase.csproj": {
+              "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.MockDatabase\\Ila.NLayer.ProjectTemplates.MockDatabase.csproj"
             }
           }
         }

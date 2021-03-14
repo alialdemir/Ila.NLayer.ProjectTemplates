@@ -14,9 +14,9 @@ namespace Ila.NLayer.ProjectTemplates.Core.Extensions
         /// <typeparam name="TInterface">Repository</typeparam>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddScopedDynamic<TInterface>(this IServiceCollection services)
+        public static IServiceCollection AddScopedDynamic(this IServiceCollection services, Type tint)
         {
-            TypeInfo genericType = typeof(TInterface).GetTypeInfo();
+            TypeInfo genericType = tint.GetTypeInfo();
 
             IEnumerable<Type> implementationTypes = genericType
                                                         .Assembly

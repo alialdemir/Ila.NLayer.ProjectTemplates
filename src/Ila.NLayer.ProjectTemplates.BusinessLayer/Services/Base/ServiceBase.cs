@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 
 namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
 {
-    public class ServiceBase<TEntity, TRepository> : Disposable, IRepositoryBase<TEntity>
+    public class ServiceBase<TEntity, TRepository> : Disposable, IRepositoryBase<TEntity>, IServiceBase<TEntity, TRepository>
              where TEntity : class, IEntityBase, new()
              where TRepository : IRepositoryBase<TEntity>
     {
@@ -23,36 +23,43 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
 
         #region Constructors
 
-        public ServiceBase(IDataProvider unitOfWork)
+        public ServiceBase(IDataProvider dataProvider)
         {
-            _unitOfWork = unitOfWork;
+            CurrentRepository = dataProvider.Repository<TEntity, TRepository>();
         }
 
         #endregion Constructors
 
         #region Properties
 
-        private TRepository Repository
+        /// <summary>
+        /// Gets a current repository
+        /// </summary>
+        private TRepository CurrentRepository
         {
-            get
-            {
-                return _unitOfWork.Repository<TEntity, TRepository>();
-            }
+            get; set;
         }
 
         /// <summary>
         /// Gets a table
         /// </summary>
-        public IQueryable<TEntity> Table => Repository.Table;
+        public IQueryable<TEntity> Table => CurrentRepository.Table;
 
         /// <summary>
         /// Gets a NoTracking
         /// </summary>
-        public IQueryable<TEntity> NoTracking => Repository.NoTracking;
+        public IQueryable<TEntity> NoTracking => CurrentRepository.NoTracking;
 
         #endregion Properties
 
         #region Methods
+
+        protected TRepository1 Repository<TEntity1, TRepository1>()
+                    where TEntity1 : class, IEntityBase, new()
+                    where TRepository1 : IRepositoryBase<TEntity1>
+        {
+            return _unitOfWork.Repository<TEntity1, TRepository1>();
+        }
 
         /// <summary>
         /// Delete
@@ -60,7 +67,7 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
         /// <param name="id">Primary id</param>
         public virtual void Delete(object id)
         {
-            Repository.Delete(id);
+            CurrentRepository.Delete(id);
 
             SaveChanges();
         }
@@ -74,14 +81,14 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
             if (entities == null)
                 throw new ArgumentNullException(nameof(entities));
 
-            Repository.Delete(entities);
+            CurrentRepository.Delete(entities);
 
             SaveChanges();
         }
 
         public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            return Repository.Find(predicate);
+            return CurrentRepository.Find(predicate);
         }
 
         /// <summary>
@@ -93,7 +100,7 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity));
 
-            var result = Repository.Insert(entity);
+            var result = CurrentRepository.Insert(entity);
 
             SaveChanges();
 
@@ -111,7 +118,7 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
             if (entities == null)
                 throw new ArgumentNullException(nameof(entities));
 
-            var result = Repository.Insert(entities);
+            var result = CurrentRepository.Insert(entities);
 
             SaveChanges();
 
@@ -124,7 +131,7 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
         /// <returns>Number of modified rows</returns>
         public int SaveChanges()
         {
-            return Repository.SaveChanges();
+            return CurrentRepository.SaveChanges();
         }
 
         /// <summary>
@@ -136,7 +143,7 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity));
 
-            var entityModel = Repository.Update(entity);
+            var entityModel = CurrentRepository.Update(entity);
 
             SaveChanges();
 
@@ -149,7 +156,7 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
         /// <param name="id">Primary id</param>
         public TEntity GetById(object id)
         {
-            return Repository.GetById(id);
+            return CurrentRepository.GetById(id);
         }
 
         /// <summary>
@@ -161,7 +168,10 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
         /// <returns>IPagedList<TModel></returns>
         public IPagedList<TModel> GetAllPaged<TModel>(Func<IQueryable<TEntity>, IQueryable<TModel>> func, IPaging paging)
         {
-            return Repository.GetAllPaged(func, paging);
+            if (func == null)
+                throw new ArgumentNullException(nameof(func));
+
+            return CurrentRepository.GetAllPaged(func, paging);
         }
 
         #endregion Methods

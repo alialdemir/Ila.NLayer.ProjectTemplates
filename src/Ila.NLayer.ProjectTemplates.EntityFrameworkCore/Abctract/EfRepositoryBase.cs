@@ -1,8 +1,8 @@
 ﻿using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
 using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityWithDeletableBase;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
 using Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -13,7 +13,7 @@ using System.Linq.Expressions;
 
 namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
 {
-    public class EfRepositoryBase<TEntity> : RepositoryBase<TEntity>, IEfRepositoryBase<TEntity> where TEntity : class, IEntityBase, new()
+    public class EfRepositoryBase<TEntity> : Disposable, IEfRepositoryBase<TEntity> where TEntity : class, IEntityBase, new()
     {
         #region Fields
 
@@ -40,12 +40,12 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// <summary>
         /// Gets a table
         /// </summary>
-        public override IQueryable<TEntity> Table => DbSet.AsQueryable();
+        public IQueryable<TEntity> Table => DbSet.AsQueryable();
 
         /// <summary>
         /// Gets a NoTracking
         /// </summary>
-        public override IQueryable<TEntity> NoTracking => DbSet.AsNoTracking();
+        public IQueryable<TEntity> NoTracking => DbSet.AsNoTracking();
 
         public DbContext DbContext
         {
@@ -61,7 +61,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// Delete
         /// </summary>
         /// <param name="id">Primary id</param>
-        public override void Delete(object id)
+        public void Delete(object id)
         {
             var deleteEntity = DbContext.Entry(GetById(id));
             if (deleteEntity == null)
@@ -81,7 +81,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// Delete as list
         /// </summary>
         /// <param name="entities">List of entities</param>
-        public override void Delete(IEnumerable<TEntity> entities)
+        public void Delete(IEnumerable<TEntity> entities)
         {
             foreach (IEnumerable<TEntity> entity in entities)// TODO: Performance?
             {
@@ -93,7 +93,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// GetById
         /// </summary>
         /// <param name="id">Primary id</param>
-        public override TEntity GetById(object id)
+        public TEntity GetById(object id)
         {
             var entity = DbSet.Find(id);
             if (entity == null)
@@ -107,7 +107,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// </summary>
         /// <param name="predicate">Query</param>
         /// <returns>Query result</returns>
-        public override IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
             return DbSet.Where(predicate);
         }
@@ -116,7 +116,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// Insert
         /// </summary>
         /// <param name="entity">Entity</param>
-        public override TEntity Insert(TEntity entity)
+        public TEntity Insert(TEntity entity)
         {
             var addedEntity = DbContext.Entry(entity);
             addedEntity.State = EntityState.Added;
@@ -129,7 +129,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// </summary>
         /// <param name="entities">List of entities</param>
         /// <returns>If true, the transaction is successful</returns>
-        public override bool Insert(IEnumerable<TEntity> entities)
+        public bool Insert(IEnumerable<TEntity> entities)
         {
             DbContext.AddRange(entities);
 
@@ -140,7 +140,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// Save
         /// </summary>
         /// <returns>Number of modified rows</returns>
-        public override int SaveChanges()
+        public int SaveChanges()
         {
             return DbContext.SaveChanges();
         }
@@ -149,7 +149,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// Update
         /// </summary>
         /// <param name="entity">Entity</param>
-        public override TEntity Update(TEntity entity)
+        public TEntity Update(TEntity entity)
         {
             var updatedEntity = DbContext.Entry(entity);
 
@@ -165,7 +165,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
         /// <param name="func">Filter</param>
         /// <param name="paging">Paging</param>
         /// <returns>IPagedList<TModel></returns>
-        public override IPagedList<TModel> GetAllPaged<TModel>(Func<IQueryable<TEntity>, IQueryable<TModel>> func, IPaging paging)
+        public IPagedList<TModel> GetAllPaged<TModel>(Func<IQueryable<TEntity>, IQueryable<TModel>> func, IPaging paging)
         {
             return func(NoTracking).ToPagedList<TModel>(paging);
         }

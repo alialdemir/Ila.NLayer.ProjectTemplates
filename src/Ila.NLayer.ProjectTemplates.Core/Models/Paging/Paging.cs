@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace Ila.NLayer.ProjectTemplates.Core.Models.Paging
 {
+    [Serializable]
     public class Paging : IPaging
     {
         private int? _pageNumber = 1;

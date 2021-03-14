@@ -1,4 +1,12 @@
+using Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base;
+using Ila.NLayer.ProjectTemplates.Core.Abctract;
+using Ila.NLayer.ProjectTemplates.Core.Extensions;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.DataProvider;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.UnitOfWork;
 using Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions;
+using Ila.NLayer.ProjectTemplates.WebApi.Filters;
+using Ila.NLayer.ProjectTemplates.WebApi.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -16,19 +24,27 @@ namespace Ila.NLayer.ProjectTemplates.WebApi
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services
+                // ila n layer core dependencies
+                .AddScoped<IDataProvider, DataProvider>()
+                .AddScoped<IValidationDictionary, ModelStateWrapper>()
+                .AddScoped(typeof(IServiceBase<,>), typeof(ServiceBase<,>))
 
-            services.AddNLayerWithEntityFramework();
+                // Adds services and repositories automatically as addScoped
+                .AddScopedDynamic(typeof(IRepositoryBase<>))
+                .AddScopedDynamic(typeof(IServiceBase<,>))
 
-            //    services.AddScopedDynamic<IRepositoryBase<EntityBase>>();// Adds all repository classes as AddScoped (Optional)
+                // By default it uses mock repository. Optionally use other orm tools
+                // .AddNLayerWithEntityFramework()
+                .AddNLayerWithMock()
 
-            services.AddControllers();
+                // In the service layer filter inserts for validation
+                .AddControllers(opts => opts.Filters.Add(typeof(ModelValidateFilter)))
+                .AddJsonOptions(options => options.JsonSerializerOptions.IgnoreNullValues = true);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

@@ -74,9 +74,12 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.DataProvider
 
         protected override void Dispose(bool disposing)
         {
-            foreach (IDisposable repository in _repositories.Values)
+            if (_repositories != null && _repositories.Values != null)
             {
-                repository.Dispose();
+                foreach (IDisposable repository in _repositories.Values)
+                {
+                    repository.Dispose();
+                }
             }
 
             base.Dispose(disposing);

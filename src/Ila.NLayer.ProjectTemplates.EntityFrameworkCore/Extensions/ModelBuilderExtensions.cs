@@ -10,10 +10,14 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions
     {
         public static void AddGlobalSoftDeletableFilter(this ModelBuilder modelBuilder)
         {
-            foreach (var type in modelBuilder.Model.GetEntityTypes())
+            var entityTypes = modelBuilder
+                .Model
+                .GetEntityTypes()
+                .Where(type => typeof(IEntityWithDeletableBase).IsAssignableFrom(type.ClrType));
+
+            foreach (var type in entityTypes)
             {
-                if (typeof(IEntityWithDeletableBase).IsAssignableFrom(type.ClrType))
-                    modelBuilder.SetIEntityWithDeletableFilter(type.ClrType);
+                modelBuilder.SetIEntityWithDeletableFilter(type.ClrType);
             }
         }
 
