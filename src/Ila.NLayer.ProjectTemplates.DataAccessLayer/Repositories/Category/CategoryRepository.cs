@@ -1,16 +1,29 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.UnitOfWork;
+﻿using System.Linq;
+using AutoMapper;
+using Ila.NLayer.ProjectTemplates.Core.Extensions;
+using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
+using Ila.NLayer.ProjectTemplates.Core.Models.Response;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.DbContext;
+using Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract;
 
 namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Category
 {
-    public class CategoryRepository : RepositoryBase<Entities.Category>, ICategoryRepository
+    public class CategoryRepository : EfRepositoryBase<Entities.Category, IlaDbContext>, ICategoryRepository
     {
-        #region Constructor
+        private readonly IMapper _mapper;
 
-        public CategoryRepository(IDataProvider dataProvider) : base(dataProvider)
+        public CategoryRepository(IEfDataProvider<IlaDbContext> dataProvider,
+                                  IMapper mapper) : base(dataProvider)
         {
+            _mapper = mapper;
         }
 
-        #endregion Constructor
+        public IPagedList<CategoryResponseModel> GetCategoryPagedList(Paging paging)
+        {
+            return NoTracking
+                        .Select(category => _mapper.Map<CategoryResponseModel>(category))
+                        .ToPagedList(paging);
+        }
     }
 }

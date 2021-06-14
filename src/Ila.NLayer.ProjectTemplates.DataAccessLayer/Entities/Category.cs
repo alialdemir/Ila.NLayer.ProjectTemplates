@@ -1,4 +1,4 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityBase;
+﻿using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
 
 namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities
 {

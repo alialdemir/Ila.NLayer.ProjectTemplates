@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
+using Ila.NLayer.ProjectTemplates.Core.Models.Base;
 
 namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract
 {
@@ -7,8 +9,8 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract
     {
         public MappingProfile()
         {
-            CreateMap<Core.Models.Base.ModelBase, Entities.Base.EntityBase.EntityBase>();
-            CreateMap<Entities.Base.EntityBase.EntityBase, Core.Models.Base.ModelBase>();
+            CreateMap<ModelBase, EntityBase>();
+            CreateMap<EntityBase, ModelBase>();
         }
     }
 }

@@ -1,16 +1,15 @@
-﻿using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
-using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.UnitOfWork;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.DataProvider;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
+using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
 
-namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
+namespace Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Repositories.Base
 {
-    public class RepositoryBase<TEntity> : Disposable, IRepositoryBase<TEntity> where TEntity : class, IEntityBase, new()
+    public abstract class RepositoryBase<TEntity> : Disposable, IRepositoryBase<TEntity> where TEntity : class, IEntityBase, new()
     {
         #region Fields
 
@@ -30,11 +29,11 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
         #region Properties
 
         /// <summary>
-        /// Gets a current repository
+        /// Gets a NoTracking
         /// </summary>
-        private IRepositoryBase<TEntity> CurrentRepository
+        public virtual IQueryable<TEntity> NoTracking
         {
-            get => _dataProvider.Repository<TEntity, IRepositoryBase<TEntity>>();
+            get => CurrentRepository.NoTracking;
         }
 
         /// <summary>
@@ -46,22 +45,16 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
         }
 
         /// <summary>
-        /// Gets a NoTracking
+        /// Gets a current repository
         /// </summary>
-        public virtual IQueryable<TEntity> NoTracking
+        private IRepositoryBase<TEntity> CurrentRepository
         {
-            get => CurrentRepository.NoTracking;
+            get => _dataProvider.Repository<TEntity, IRepositoryBase<TEntity>>();
         }
 
         #endregion Properties
 
         #region Methods
-
-        /// <summary>
-        /// GetById
-        /// </summary>
-        /// <param name="id">Primary id</param>
-        public virtual TEntity GetById(object id) => CurrentRepository.GetById(id);
 
         /// <summary>
         /// Delete
@@ -81,6 +74,21 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
         /// <param name="predicate">Query</param>
         /// <returns>Query result</returns>
         public virtual IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate) => CurrentRepository.Find(predicate);
+
+        /// <summary>
+        /// GetAllPaged
+        /// </summary>
+        /// <typeparam name="TModel">Result model</typeparam>
+        /// <param name="func">Filter</param>
+        /// <param name="paging">Paging</param>
+        /// <returns>IPagedList<TModel></returns>
+        public virtual IPagedList<TModel> GetAllPaged<TModel>(Func<IQueryable<TEntity>, IQueryable<TModel>> func, IPaging paging) => CurrentRepository.GetAllPaged(func, paging);
+
+        /// <summary>
+        /// GetById
+        /// </summary>
+        /// <param name="id">Primary id</param>
+        public virtual TEntity GetById(object id) => CurrentRepository.GetById(id);
 
         /// <summary>
         /// Insert
@@ -106,15 +114,6 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
         /// </summary>
         /// <param name="entity">Entity</param>
         public virtual TEntity Update(TEntity entity) => CurrentRepository.Update(entity);
-
-        /// <summary>
-        /// GetAllPaged
-        /// </summary>
-        /// <typeparam name="TModel">Result model</typeparam>
-        /// <param name="func">Filter</param>
-        /// <param name="paging">Paging</param>
-        /// <returns>IPagedList<TModel></returns>
-        public virtual IPagedList<TModel> GetAllPaged<TModel>(Func<IQueryable<TEntity>, IQueryable<TModel>> func, IPaging paging) => CurrentRepository.GetAllPaged(func, paging);
 
         #endregion Methods
     }

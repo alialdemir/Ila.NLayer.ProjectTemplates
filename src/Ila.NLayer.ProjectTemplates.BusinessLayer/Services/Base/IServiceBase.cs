@@ -1,5 +1,5 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
+﻿using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Repositories.Base;
 
 namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base
 {

@@ -1,7 +1,7 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityBase;
+﻿using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
 using System;
 
-namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityWithDateBase
+namespace Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityWithDateBase
 {
     public abstract class EntityWithDateBase<TId> : EntityBase<TId>, IEntityWithDateBase
     {

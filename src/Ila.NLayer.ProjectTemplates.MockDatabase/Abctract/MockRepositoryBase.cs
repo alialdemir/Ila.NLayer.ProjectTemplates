@@ -1,11 +1,11 @@
-﻿using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Repositories.Base;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
 
 namespace Ila.NLayer.ProjectTemplates.MockDatabase.Abctract
 {

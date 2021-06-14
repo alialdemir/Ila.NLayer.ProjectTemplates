@@ -1,9 +1,10 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
-using System;
+﻿using System;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Repositories.Base;
 
-namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.UnitOfWork
+namespace Ila.NLayer.ProjectTemplates.Core.Abctract.Database.DataProvider
 {
+
     public interface IDataProvider : IDisposable
     {
         int Commit<TEntity, TRepository>() where TEntity : class, IEntityBase, new()

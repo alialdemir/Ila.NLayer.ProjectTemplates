@@ -1,4 +1,4 @@
-﻿namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityBase
+﻿namespace Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase
 {
     public class EntityBase : IEntityBase
     {

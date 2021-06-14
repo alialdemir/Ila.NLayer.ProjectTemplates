@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ila.NLayer.ProjectTemplates.WebApi.Controllers
 {
-    [Authorize]
+   // [Authorize]
     [ApiController]
     [Route("api/v1/[controller]")]
     [Produces("application/json")]

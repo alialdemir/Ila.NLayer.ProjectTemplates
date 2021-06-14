@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityWithDateBase
+namespace Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityWithDateBase
 {
     public interface IEntityWithDateBase
     {

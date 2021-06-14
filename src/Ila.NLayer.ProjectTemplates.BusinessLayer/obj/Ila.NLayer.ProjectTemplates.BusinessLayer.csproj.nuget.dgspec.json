@@ -1,38 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.BusinessLayer\\Ila.NLayer.ProjectTemplates.BusinessLayer.csproj": {}
+    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.BusinessLayer\\Ila.NLayer.ProjectTemplates.BusinessLayer.csproj": {
+    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.BusinessLayer\\Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
+        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.BusinessLayer",
-        "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.BusinessLayer\\Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.BusinessLayer\\obj\\",
+        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
+        "packagesPath": "/Users/alialdemir/.nuget/packages/",
+        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ALI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/alialdemir/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
-                "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
+              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
+                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
               }
             }
           }
@@ -45,6 +40,13 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,36 +62,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.Core\\Ila.NLayer.ProjectTemplates.Core.csproj": {
+    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.Core\\Ila.NLayer.ProjectTemplates.Core.csproj",
+        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.Core",
-        "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.Core\\Ila.NLayer.ProjectTemplates.Core.csproj",
-        "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.Core\\obj\\",
+        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
+        "packagesPath": "/Users/alialdemir/.nuget/packages/",
+        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ALI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/alialdemir/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -101,14 +98,23 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.2.3, )"
+            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
               "target": "Package",
               "version": "[5.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[12.0.3, )"
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -126,39 +132,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
+    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
+        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.DataAccessLayer",
-        "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.DataAccessLayer\\obj\\",
+        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
+        "packagesPath": "/Users/alialdemir/.nuget/packages/",
+        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ALI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/alialdemir/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.Core\\Ila.NLayer.ProjectTemplates.Core.csproj": {
-                "projectPath": "C:\\GitHub\\Ila.NLayer.ProjectTemplates\\src\\Ila.NLayer.ProjectTemplates.Core\\Ila.NLayer.ProjectTemplates.Core.csproj"
+              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
+                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
+              },
+              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
+                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj"
               }
             }
           }
@@ -171,10 +175,15 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
               "version": "[10.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
@@ -196,7 +205,69 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj",
+        "projectName": "Ila.NLayer.ProjectTemplates.EntityFrameworkCore",
+        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj",
+        "packagesPath": "/Users/alialdemir/.nuget/packages/",
+        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alialdemir/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
+                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
         }
       }
     }

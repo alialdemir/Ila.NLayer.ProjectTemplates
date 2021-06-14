@@ -1,12 +1,10 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.UnitOfWork;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Repositories.Base;
+using Microsoft.Extensions.Logging;
 
-namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.DataProvider
+namespace Ila.NLayer.ProjectTemplates.Core.Abctract.Database.DataProvider
 {
     public class DataProvider : Disposable, IDataProvider
     {
@@ -67,7 +65,8 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.DataProvider
 
             var repository = _serviceProvider.GetService(type);
 
-            _repositories.Add(type.Name, repository);
+            if (repository != null)
+                _repositories.Add(type.Name, repository);
 
             return (TRepository)_repositories[type.Name];
         }

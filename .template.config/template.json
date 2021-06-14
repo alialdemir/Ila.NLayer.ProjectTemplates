@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Ali Aldemir",
+  "classifications": [
+    "WebAPI/Library"
+  ],
+  "name": "Ila NLayer ProjectTemplate",
+  "defaultName": "MyCommandTooIla.NLayer.ProjectTemplatesl",
+  "identity": "Ila.NLayer.ProjectTemplates",
+  "shortName": "nlayertemplates",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Ila.NLayer.ProjectTemplates",
+  "preferNameDirectory": true,
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "netcoreapp3.1",
+          "description": "Target netcoreapp3.1"
+        }
+      ],
+      "replaces": "netcoreapp3.1",
+      "defaultValue": "netcoreapp3.1"
+    },
+    "AuthorName": {
+      "type": "parameter",
+      "defaultValue": "(insert author name)",
+      "replaces": "AuthorName",
+      "datatype": "text",
+      "description": "Author name"
+    },
+    "Description": {
+      "type": "parameter",
+      "description": "Description text that will be shown for this nuget package on nuget.org",
+      "defaultValue": "(insert description)",
+      "replaces": "DescriptionContent"
+    }
+  }
+}

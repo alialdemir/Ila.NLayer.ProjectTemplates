@@ -1,32 +1,29 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.DataProvider;
+﻿using System;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.DataProvider;
 using Microsoft.Extensions.Logging;
-using System;
 
 namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
 {
-    public class EfDataProvider : DataProvider
+    public class EfDataProvider<TDbContext> : DataProvider, IEfDataProvider<TDbContext> where TDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        #region Fields
 
         private readonly ILoggerFactory _loggerFactory;
 
-        #endregion Fields
-
-        #region Constructors
 
         public EfDataProvider(IServiceProvider serviceProvider,
+                              TDbContext dbContext,
                               ILoggerFactory loggerFactory) : base(serviceProvider, loggerFactory)
         {
             _loggerFactory = loggerFactory;
+            DbContext = dbContext;
         }
 
-        #endregion Constructors
+        public TDbContext DbContext { get; private set; }
 
-        #region Methods
 
         public override int Commit<TEntity, TRepository>()
         {
-            var repository = (IEfRepositoryBase<TEntity>)Repository<TEntity, TRepository>();
+            var repository = (IEfRepositoryBase<TEntity, TDbContext>)Repository<TEntity, TRepository>();
             if (repository == null)
                 throw new ArgumentException(nameof(repository));
 
@@ -52,7 +49,5 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
                 }
             }
         }
-
-        #endregion Methods
     }
 }

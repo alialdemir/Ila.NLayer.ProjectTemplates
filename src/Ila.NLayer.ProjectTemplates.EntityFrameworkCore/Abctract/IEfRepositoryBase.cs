@@ -1,11 +1,13 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
-using Microsoft.EntityFrameworkCore;
+﻿using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Repositories.Base;
 
 namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
 {
-    public interface IEfRepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class, IEntityBase, new()
+    public interface IEfRepositoryBase<TEntity, TDbContext> : IRepositoryBase<TEntity>
+                                           where TEntity : class, IEntityBase, new()
+                                           where TDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        DbContext DbContext { get; }
+        TDbContext DbContext { get; }
+
     }
 }

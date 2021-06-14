@@ -7,10 +7,15 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Ila.NLayer.ProjectTemplates.Core\Ila.NLayer.ProjectTemplates.Core.csproj" />
+    <ProjectReference Include="..\Ila.NLayer.ProjectTemplates.EntityFrameworkCore\Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DbContext\" />
+  </ItemGroup>
 </Project>

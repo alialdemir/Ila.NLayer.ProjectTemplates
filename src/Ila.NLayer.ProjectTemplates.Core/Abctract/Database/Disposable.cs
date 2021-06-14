@@ -1,6 +1,5 @@
 ﻿using System;
-
-namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract
+namespace Ila.NLayer.ProjectTemplates.Core.Abctract.Database
 {
     public class Disposable : IDisposable
     {

@@ -1,12 +1,12 @@
-﻿using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
-using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityBase;
+using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
 
-namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base
+namespace Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Repositories.Base
 {
     public interface IRepositoryBase<TEntity> where TEntity : class, IEntityBase, new()
     {

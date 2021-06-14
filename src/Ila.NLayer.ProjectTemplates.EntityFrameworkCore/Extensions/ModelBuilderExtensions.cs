@@ -1,8 +1,8 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities.Base.EntityWithDeletableBase;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
+using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Entities.Base.EntityWithDeletableBase;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions
 {

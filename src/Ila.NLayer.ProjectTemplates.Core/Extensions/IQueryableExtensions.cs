@@ -1,9 +1,9 @@
-﻿using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
-using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Ila.NLayer.ProjectTemplates.Core.Models.PagedList;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
 
-namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions
+namespace Ila.NLayer.ProjectTemplates.Core.Extensions
 {
     public static class IQueryableExtensions
     {

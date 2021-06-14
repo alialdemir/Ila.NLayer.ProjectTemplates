@@ -1,5 +1,6 @@
 ﻿using Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Category;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities;
+using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
+using Ila.NLayer.ProjectTemplates.Core.Models.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ila.NLayer.ProjectTemplates.WebApi.Controllers
@@ -13,12 +14,18 @@ namespace Ila.NLayer.ProjectTemplates.WebApi.Controllers
             _categoryService = categoryService;
         }
 
-        [HttpGet]
-        public IActionResult Post()
+        [HttpPost]
+        public IActionResult Post([FromBody] CategoryResponseModel category)
         {
-            _categoryService.SampleValidasiton(new Category { });
+            _categoryService.Insert(category);
 
             return Ok();
+        }
+
+        [HttpGet]
+        public IActionResult GetCategories([FromQuery] Paging paging)
+        {
+            return Ok(_categoryService.GetCategoryPagedList(paging));
         }
     }
 }

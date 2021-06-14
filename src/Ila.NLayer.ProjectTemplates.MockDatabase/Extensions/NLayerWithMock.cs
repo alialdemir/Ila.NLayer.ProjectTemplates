@@ -1,4 +1,4 @@
-﻿using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Base;
+﻿using Ila.NLayer.ProjectTemplates.Core.Abctract.Database.Repositories.Base;
 using Ila.NLayer.ProjectTemplates.MockDatabase.Abctract;
 using Microsoft.Extensions.DependencyInjection;
 

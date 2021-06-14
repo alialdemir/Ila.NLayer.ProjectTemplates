@@ -1,4 +1,5 @@
-﻿using Ila.NLayer.ProjectTemplates.Core.Abctract;
+﻿using System.Linq;
+using Ila.NLayer.ProjectTemplates.Core.Abctract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -13,17 +14,13 @@ namespace Ila.NLayer.ProjectTemplates.WebApi.Filters
             var modelState = (ModelStateDictionary)context.HttpContext.RequestServices.GetService<IValidationDictionary>();
             if (!modelState.IsValid)
             {
-                var currentController = (ControllerBase)context.Controller;
+                var errors = modelState.ToDictionary(x => x.Key, x => x.Value.Errors.Select(e => e.ErrorMessage).ToArray());
 
-                foreach (var item in modelState)
+                context.Result = new BadRequestObjectResult(new
                 {
-                    foreach (var error in item.Value.Errors)
-                    {
-                        currentController.ModelState.AddModelError(item.Key, error.ErrorMessage);
-                    }
-                }
+                    Errors = errors
+                });
 
-                context.Result = new BadRequestObjectResult(currentController.ModelState);
             }
 
             base.OnResultExecuting(context);
