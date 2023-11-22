@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {}
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {}
   },
   "projects": {
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
+        "projectUniqueName": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.Core",
-        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
+        "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
         "packagesPath": "/Users/alialdemir/.nuget/packages/",
-        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/obj/",
+        "outputPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alialdemir/.config/NuGet/NuGet.Config"
+          "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,19 +41,19 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[10.2.3, )"
+              "version": "[11.8.1, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -61,7 +62,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -70,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
         }
       }
     }

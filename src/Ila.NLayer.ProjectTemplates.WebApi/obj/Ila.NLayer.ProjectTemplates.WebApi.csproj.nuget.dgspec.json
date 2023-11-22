@@ -1,33 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/Ila.NLayer.ProjectTemplates.WebApi.csproj": {}
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/Ila.NLayer.ProjectTemplates.WebApi.csproj": {}
   },
   "projects": {
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj": {
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
+        "projectUniqueName": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.BusinessLayer",
-        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
+        "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj",
         "packagesPath": "/Users/alialdemir/.nuget/packages/",
-        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/obj/",
+        "outputPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alialdemir/.config/NuGet/NuGet.Config"
+          "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
               }
             }
           }
@@ -44,7 +45,7 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[12.0.1, )"
             }
           },
           "imports": [
@@ -53,7 +54,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -62,26 +64,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
+        "projectUniqueName": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.Core",
-        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
+        "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj",
         "packagesPath": "/Users/alialdemir/.nuget/packages/",
-        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/obj/",
+        "outputPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alialdemir/.config/NuGet/NuGet.Config"
+          "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -102,19 +105,19 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[10.2.3, )"
+              "version": "[11.8.1, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[8.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -123,7 +126,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -132,37 +136,38 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
+        "projectUniqueName": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.DataAccessLayer",
-        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
+        "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj",
         "packagesPath": "/Users/alialdemir/.nuget/packages/",
-        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/obj/",
+        "outputPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alialdemir/.config/NuGet/NuGet.Config"
+          "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
               },
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj"
               }
             }
           }
@@ -179,7 +184,7 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[12.0.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -187,7 +192,7 @@
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -196,7 +201,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -205,34 +211,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj",
+        "projectUniqueName": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.EntityFrameworkCore",
-        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj",
+        "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj",
         "packagesPath": "/Users/alialdemir/.nuget/packages/",
-        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/obj/",
+        "outputPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alialdemir/.config/NuGet/NuGet.Config"
+          "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
               }
             }
           }
@@ -249,7 +256,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -258,7 +265,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -267,34 +275,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj": {
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj",
+        "projectUniqueName": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.MockDatabase",
-        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj",
+        "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj",
         "packagesPath": "/Users/alialdemir/.nuget/packages/",
-        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/obj/",
+        "outputPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alialdemir/.config/NuGet/NuGet.Config"
+          "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
               }
             }
           }
@@ -314,7 +323,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -323,46 +333,48 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/Ila.NLayer.ProjectTemplates.WebApi.csproj": {
+    "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/Ila.NLayer.ProjectTemplates.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/Ila.NLayer.ProjectTemplates.WebApi.csproj",
+        "projectUniqueName": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/Ila.NLayer.ProjectTemplates.WebApi.csproj",
         "projectName": "Ila.NLayer.ProjectTemplates.WebApi",
-        "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/Ila.NLayer.ProjectTemplates.WebApi.csproj",
+        "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/Ila.NLayer.ProjectTemplates.WebApi.csproj",
         "packagesPath": "/Users/alialdemir/.nuget/packages/",
-        "outputPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/obj/",
+        "outputPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.WebApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alialdemir/.config/NuGet/NuGet.Config"
+          "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.311/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.BusinessLayer/Ila.NLayer.ProjectTemplates.BusinessLayer.csproj"
               },
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
               },
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
               },
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.EntityFrameworkCore/Ila.NLayer.ProjectTemplates.EntityFrameworkCore.csproj"
               },
-              "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj": {
-                "projectPath": "/Users/alialdemir/Github/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj"
+              "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj": {
+                "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.MockDatabase/Ila.NLayer.ProjectTemplates.MockDatabase.csproj"
               }
             }
           }
@@ -374,8 +386,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "FluentValidation.AspNetCore": {
               "target": "Package",
@@ -392,7 +404,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -404,7 +417,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-preview.3.21202.5/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
         }
       }
     }

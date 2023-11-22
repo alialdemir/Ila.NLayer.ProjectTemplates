@@ -15,7 +15,7 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions
         {
             services.AddScoped(typeof(IEfRepositoryBase<,>), typeof(EfRepositoryBase<,>));
 
-            services.AddScoped(typeof(IRepositoryBase<>), typeof(EfRepositoryBase<,>));
+           // services.AddScoped(typeof(IRepositoryBase<>), typeof(EfRepositoryBase<,>));
 
             services.AddScopedDynamic(typeof(IEfRepositoryBase<,>),typeof(TContext));
 

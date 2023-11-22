@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{5D87
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ila.NLayer.ProjectTemplates.MockDatabase", "src\Ila.NLayer.ProjectTemplates.MockDatabase\Ila.NLayer.ProjectTemplates.MockDatabase.csproj", "{61F9905C-BACA-49D6-A69C-6B092199E171}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ila.NLayer.ProjectTemplates.WebAdmin", "Ila.NLayer.ProjectTemplates.WebAdmin\Ila.NLayer.ProjectTemplates.WebAdmin.csproj", "{468E3433-806A-475A-907E-E8C2FD9ACDB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{61F9905C-BACA-49D6-A69C-6B092199E171}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61F9905C-BACA-49D6-A69C-6B092199E171}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61F9905C-BACA-49D6-A69C-6B092199E171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468E3433-806A-475A-907E-E8C2FD9ACDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468E3433-806A-475A-907E-E8C2FD9ACDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468E3433-806A-475A-907E-E8C2FD9ACDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468E3433-806A-475A-907E-E8C2FD9ACDB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

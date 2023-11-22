@@ -14,8 +14,9 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
 {
-    public class EfRepositoryBase<TEntity, TDbContext> : RepositoryBase<TEntity>, IEfRepositoryBase<TEntity, TDbContext> where TEntity : class, IEntityBase, new()
-     where TDbContext : Microsoft.EntityFrameworkCore.DbContext
+    public class EfRepositoryBase<TEntity, TDbContext> : RepositoryBase<TEntity>, IEfRepositoryBase<TEntity, TDbContext>
+        where TEntity : class, IEntityBase, new()
+        where TDbContext : DbContext
     {
         #region Fields
 

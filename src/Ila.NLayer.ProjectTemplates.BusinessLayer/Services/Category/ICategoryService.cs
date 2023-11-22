@@ -7,7 +7,9 @@ using Ila.NLayer.ProjectTemplates.DataAccessLayer.Repositories.Category;
 
 namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Category
 {
-    public interface ICategoryService : IRepositoryBase<DataAccessLayer.Entities.Category>, IServiceBase<DataAccessLayer.Entities.Category, ICategoryRepository>
+    public interface ICategoryService : IRepositoryBase<DataAccessLayer.Entities.Category>,
+        IServiceBase<DataAccessLayer.Entities.Category, ICategoryRepository>
+
     {
         void Insert(CategoryResponseModel category);
         IPagedList<CategoryResponseModel> GetCategoryPagedList(Paging paging);

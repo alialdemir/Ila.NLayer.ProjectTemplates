@@ -5,11 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Ila.NLayer.ProjectTemplates.Core\Ila.NLayer.ProjectTemplates.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
+  </ItemGroup>
 </Project>
