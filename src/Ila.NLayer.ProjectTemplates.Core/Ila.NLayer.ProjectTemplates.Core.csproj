@@ -19,5 +19,11 @@
     <Folder Include="Abctract\Database\DataProvider\" />
     <Folder Include="Abctract\Database\Repositories\" />
     <Folder Include="Abctract\Database\Entities\" />
+    <Folder Include="Models\Results\" />
+    <Folder Include="Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Models\Results\" />
+    <None Remove="Enums\" />
   </ItemGroup>
 </Project>

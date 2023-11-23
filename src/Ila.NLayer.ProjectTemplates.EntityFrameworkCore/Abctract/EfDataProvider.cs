@@ -20,7 +20,6 @@ namespace Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Abctract
 
         public TDbContext DbContext { get; private set; }
 
-
         public override int Commit<TEntity, TRepository>()
         {
             var repository = (IEfRepositoryBase<TEntity, TDbContext>)Repository<TEntity, TRepository>();

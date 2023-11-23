@@ -1741,6 +1741,7 @@
           "Ila.NLayer.ProjectTemplates.Core": "1.0.0",
           "Ila.NLayer.ProjectTemplates.EntityFrameworkCore": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
         },
         "compile": {

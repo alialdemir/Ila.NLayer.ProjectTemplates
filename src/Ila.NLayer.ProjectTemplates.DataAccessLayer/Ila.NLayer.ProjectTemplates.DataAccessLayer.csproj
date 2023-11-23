@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+   <!-- <TargetFramework>net7.0</TargetFramework>-->
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
@@ -8,6 +9,11 @@
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,5 +23,14 @@
 
   <ItemGroup>
     <Folder Include="DbContext\" />
+    <Folder Include="Repositories\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Repositories\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20231123085019_initial.cs" />
+    <Compile Remove="Migrations\20231123085019_initial.Designer.cs" />
+    <Compile Remove="Migrations\IlaDbContextModelSnapshot.cs" />
   </ItemGroup>
 </Project>

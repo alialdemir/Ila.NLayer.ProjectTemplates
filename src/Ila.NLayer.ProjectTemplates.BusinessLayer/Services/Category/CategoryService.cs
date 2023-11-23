@@ -24,13 +24,20 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Category
             _validationDictionary = validationDictionary;
         }
 
+        /// <summary>
+        /// Retrieves a paged list of category models.
+        /// </summary>
+        /// <param name="paging">Paging information for the result.</param>
+        /// <returns>A paged list of category response models.</returns>
         public IPagedList<CategoryResponseModel> GetCategoryPagedList(Paging paging)
         {
-
-            return CurrentRepository
-                      .GetCategoryPagedList(paging);
+            return CurrentRepository.GetCategoryPagedList(paging);
         }
 
+        /// <summary>
+        /// Inserts a new category into the system.
+        /// </summary>
+        /// <param name="category">The category model to be inserted.</param>
         public void Insert(CategoryResponseModel category)
         {
             if (_validationDictionary.Validation(category))
@@ -38,6 +45,5 @@ namespace Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Category
                 Insert(_mapper.Map<DataAccessLayer.Entities.Category>(category));
             }
         }
-
     }
 }

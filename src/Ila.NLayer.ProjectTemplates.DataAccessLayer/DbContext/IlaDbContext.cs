@@ -11,5 +11,8 @@ namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.DbContext
         }
 
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Product> Products{ get; set; }
     }
+
 }

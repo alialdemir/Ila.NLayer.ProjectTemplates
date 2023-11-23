@@ -32,9 +32,11 @@
   <ItemGroup>
     <None Remove="Filters\" />
     <None Remove="Helpers\" />
+    <None Remove="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Filters\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Views\Product\" />
   </ItemGroup>
 </Project>
