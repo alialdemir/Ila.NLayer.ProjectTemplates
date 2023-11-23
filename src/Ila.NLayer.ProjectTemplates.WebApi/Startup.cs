@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 using FluentValidation;
 using Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base;
@@ -6,11 +7,13 @@ using Ila.NLayer.ProjectTemplates.Core.Extensions;
 using Ila.NLayer.ProjectTemplates.Core.Models.Response;
 using Ila.NLayer.ProjectTemplates.Core.Validator;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.DbContext;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities;
 using Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions;
 using Ila.NLayer.ProjectTemplates.WebApi.Filters;
 using Ila.NLayer.ProjectTemplates.WebApi.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -62,7 +65,7 @@ namespace Ila.NLayer.ProjectTemplates.WebApi
             AutoMappeServices(services);
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IlaDbContext context, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -79,6 +82,9 @@ namespace Ila.NLayer.ProjectTemplates.WebApi
             {
                 endpoints.MapControllers();
             });
+
+            DbInitializer.Initialize(context,userManager, roleManager);
+
         }
     }
 }

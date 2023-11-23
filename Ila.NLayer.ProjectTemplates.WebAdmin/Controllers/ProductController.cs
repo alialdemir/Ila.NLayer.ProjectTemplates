@@ -1,7 +1,9 @@
-﻿using AutoMapper;
+﻿using System.Data;
+using AutoMapper;
 using Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Product;
 using Ila.NLayer.ProjectTemplates.Core.Models.Paging;
 using Ila.NLayer.ProjectTemplates.Core.Models.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ila.NLayer.ProjectTemplates.WebAdmin.Controllers;
@@ -12,27 +14,32 @@ public class ProductController : WebApi.Controllers.ControllerBase
     private readonly IMapper _mapper;
 
     public ProductController(IProductService productService,
-        IMapper mapper)
+                             IMapper mapper)
     {
         _productService = productService;
         _mapper = mapper;
     }
 
+    [TempData]
+    public string DeleteMessage { get; set; }
+
     public IActionResult Index([FromQuery] Paging paging)
     {
         var productList = _productService.GetProductPagedList(paging);
-        
+
+        ViewData["DeleteMessage"] = DeleteMessage;
 
         return View(productList);
     }
 
+    [HttpGet]
     public IActionResult Create()
     {
         return View();
     }
 
-
-    public IActionResult Edit([FromRoute]int id)
+    [Authorize(Roles = "Admin")]
+    public IActionResult Edit(int id)
     {
         var product = _productService
             .NoTracking
@@ -59,6 +66,7 @@ public class ProductController : WebApi.Controllers.ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public IActionResult Edit(ProductViewModel product)
     {
         if (!ModelState.IsValid)
@@ -75,6 +83,12 @@ public class ProductController : WebApi.Controllers.ControllerBase
     [HttpPost]
     public IActionResult Delete(int id)
     {
+        if(!User.IsInRole("Admin"))
+        {
+            DeleteMessage =   "You do not have permission to delete!";
+
+            return RedirectToAction("Index");
+        }
        _productService.Delete(id);
 
         return RedirectToAction("Index");

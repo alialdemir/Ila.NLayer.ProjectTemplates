@@ -11,27 +11,6 @@
 <body>
     <div>
         <div class="row">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <h3>User : @User.Identity.Name</h3><div class="col-md-3">
-                    <div class="sidebar">
-                        <div class="list-group">
-                            <a href="/Product/Index" class="list-group-item">Products</a>
-                            @if (User.IsInRole("Admin"))
-                            {
-                                <a href="/Home/Admin" class="list-group-item">Only "Admin" can access</a>
-                            }
-
-                            @if (User.IsInRole("Test"))
-                            {
-                                <a href="/Home/Test" class="list-group-item">Only "Test" can access</a>
-                            }
-                            <a href="/Home/Index" class="list-group-item">"Everyone" can access.</a>
-                            <a href="/Account/Logout" class="list-group-item">Logout</a>
-                        </div>
-                    </div>
-                </div>
-            }
             <div class="col-md-9  mt-5">
                 <div class="content">
                     @RenderBody()

@@ -7,7 +7,13 @@
     <h2>Product List</h2>
 
     <a href="@Url.Action("Create")" class="btn btn-primary mb-3">Add New Product</a>
+    @if (ViewData["DeleteMessage"] is not null)
+    {
 
+        <div class="alert alert-danger" role="alert">
+            @ViewData["DeleteMessage"]
+        </div>
+    }
     <table class="table table-striped">
         <thead>
             <tr>
@@ -31,12 +37,12 @@
                     <td>
                         <a href="@Url.Action("Edit", new { id = product.Id })" class="btn btn-warning">Edit</a>
 
-                             @using (Html.BeginForm("Delete", "Product", FormMethod.Post, new { @style = "display:inline" }))
-                            {
-                                @Html.Hidden("Id", product.Id)
-                                <button type="button" class="btn btn-danger btn-delete">Delete</button>
-                            }
-                        </td>
+                        @using (Html.BeginForm("Delete", "Product", FormMethod.Post, new { @style = "display:inline" }))
+                        {
+                            @Html.Hidden("Id", product.Id)
+                            <button type="button" class="btn btn-danger btn-delete">Delete</button>
+                        }
+                    </td>
                 </tr>
             }
         </tbody>
