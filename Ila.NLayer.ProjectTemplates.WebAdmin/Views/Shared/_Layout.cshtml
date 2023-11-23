@@ -11,20 +11,23 @@
 <body>
     <div>
         <div class="row">
-            <div class="col-md-3">
-                <div class="sidebar">
-                    <div class="list-group">
-                        <a href="/" class="list-group-item">Home</a>
-                        <a href="/Product/Index" class="list-group-item">Products</a>
+            @if (User.Identity.IsAuthenticated)
+                {
+            <h3>User : @User.Identity.Name</h3>
+                    <div class="col-md-3">
+                    <div class="sidebar">
+                        <div class="list-group">
+                            <a href="/Product/Index" class="list-group-item">Products</a>
+                        </div>
+                    </div>
+                </div>
+                }
+                <div class="col-md-9  mt-5">
+                    <div class="content">
+                        @RenderBody()
                     </div>
                 </div>
             </div>
-            <div class="col-md-9  mt-5">
-                <div class="content">
-                    @RenderBody()
-                </div>
-            </div>
-        </div>
 
     </div>
     <footer class="border-top footer text-muted">

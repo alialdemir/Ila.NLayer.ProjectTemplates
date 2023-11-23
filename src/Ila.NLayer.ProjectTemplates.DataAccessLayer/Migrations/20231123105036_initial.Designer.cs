@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ila.NLayer.ProjectTemplates.DataAccessLayer.Migrations
 {
     [DbContext(typeof(IlaDbContext))]
-    [Migration("20231123085114_initial")]
+    [Migration("20231123105036_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

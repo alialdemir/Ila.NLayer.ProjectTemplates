@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-   <!-- <TargetFramework>net7.0</TargetFramework>-->
+   <TargetFramework>net7.0</TargetFramework>
+   <!--
     <TargetFramework>netstandard2.1</TargetFramework>
+   -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +16,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.7" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,5 +35,9 @@
     <Compile Remove="Migrations\20231123085019_initial.cs" />
     <Compile Remove="Migrations\20231123085019_initial.Designer.cs" />
     <Compile Remove="Migrations\IlaDbContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20231123105036_initial.cs" />
+    <Compile Remove="Migrations\20231123105036_initial.Designer.cs" />
+    <Compile Remove="Migrations\20231123113453_initial.Designer.cs" />
+    <Compile Remove="Migrations\20231123113453_initial.cs" />
   </ItemGroup>
 </Project>

@@ -21,9 +21,11 @@
     <Folder Include="Abctract\Database\Entities\" />
     <Folder Include="Models\Results\" />
     <Folder Include="Enums\" />
+    <Folder Include="Models\Account\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Models\Results\" />
     <None Remove="Enums\" />
+    <None Remove="Models\Account\" />
   </ItemGroup>
 </Project>

@@ -17,15 +17,15 @@
           "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.1"
+          "net7.0"
         ],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
               "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj": {
                 "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.DataAccessLayer/Ila.NLayer.ProjectTemplates.DataAccessLayer.csproj"
@@ -40,8 +40,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -60,7 +60,7 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "NETStandard.Library": {
+            "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
@@ -153,15 +153,15 @@
           "/Users/alialdemir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.1"
+          "net7.0"
         ],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
               "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj": {
                 "projectPath": "/Users/alialdemir/Documents/GitHub/Ila.NLayer.ProjectTemplates/src/Ila.NLayer.ProjectTemplates.Core/Ila.NLayer.ProjectTemplates.Core.csproj"
@@ -179,12 +179,16 @@
         }
       },
       "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -217,7 +221,7 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "NETStandard.Library": {
+            "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },

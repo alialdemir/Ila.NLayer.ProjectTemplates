@@ -1,0 +1,56 @@
+﻿@model RegisterViewModel
+@using Ila.NLayer.ProjectTemplates.Core.Models.Account
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="card register-card">
+    <div class="card-body">
+        <h5 class="card-title text-center mb-4">Register</h5>
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+            {
+                <div class="alert alert-danger" role="alert">
+                    @Html.ValidationSummary()
+                </div>
+            }
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.FullName)
+                @Html.TextBoxFor(model => model.FullName, new { @class = "form-control", placeholder = "Enter your full name" })
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserName)
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", placeholder = "Enter your username" })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password)
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Enter your password" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Register</button>
+        }
+    </div>
+</div>
+
+
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+    }
+
+    .register-card {
+        width: 500px;
+        min-height: 328px;
+        height:100%;
+    }
+</style>

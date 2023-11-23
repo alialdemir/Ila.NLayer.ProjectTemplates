@@ -3,16 +3,17 @@ using AutoMapper;
 using FluentValidation;
 using Ila.NLayer.ProjectTemplates.BusinessLayer.Services.Base;
 using Ila.NLayer.ProjectTemplates.Core.Abctract;
+using Ila.NLayer.ProjectTemplates.Core.Extensions;
 using Ila.NLayer.ProjectTemplates.Core.Models.Response;
 using Ila.NLayer.ProjectTemplates.Core.Validator;
+using Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.DbContext;
 using Ila.NLayer.ProjectTemplates.DataAccessLayer.Entities;
+using Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions;
 using Ila.NLayer.ProjectTemplates.WebAdmin.Filters;
 using Ila.NLayer.ProjectTemplates.WebAdmin.Helpers;
-using Ila.NLayer.ProjectTemplates.Core.Extensions;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Ila.NLayer.ProjectTemplates.EntityFrameworkCore.Extensions;
-using Ila.NLayer.ProjectTemplates.DataAccessLayer.Abctract;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +29,23 @@ builder.Services.AddDbContext<IlaDbContext>(options =>
                          {
                              sqlOptions.MigrationsAssembly(migrationsAssembly);
                          }));
+
+
+builder.Services.AddIdentity<User, IdentityRole>(x =>
+{
+    x.Password.RequireDigit = false;
+    x.Password.RequiredLength = 3;
+    x.Password.RequireLowercase = false;
+    x.Password.RequireNonAlphanumeric = false;
+    x.Password.RequireUppercase = false;
+})
+    .AddEntityFrameworkStores<IlaDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<UserManager<User>>();
+
+
+builder.Services.AddSession();
 
 builder.Services
     // ila n layer core dependencies
@@ -76,11 +94,14 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}");
 
 app.Run();
 

@@ -3,9 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ila.NLayer.ProjectTemplates.WebApi.Controllers
 {
-   // [Authorize]
+    [Authorize]
     [Controller]
-    [Produces("application/json")]
     public class ControllerBase : Controller
     {
         #region Properties
